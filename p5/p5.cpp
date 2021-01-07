@@ -71,6 +71,8 @@ class Context {
 
 class BruteForce: public Strategy {
   private:
+    // n = length
+    // T(n) = Θ(n/2)
     bool isPalindrome(const string &s, int start, int length) const {
       int m = start + length / 2;
       for (int i = start, j = start+length-1; i < m; ++i) {
@@ -85,6 +87,8 @@ class BruteForce: public Strategy {
   public:
     BruteForce(string name = "Brute Force"): Strategy{name} {}
 
+    // n = s.size()
+    // T(n) = Θ()
     string longestPalindrome(const string &s) const override {
       int n = s.size();
       string lps = "";
